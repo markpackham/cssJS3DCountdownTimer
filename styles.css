@@ -63,7 +63,7 @@ body {
 .flip-card.flip::after {
     position: absolute;
     bottom: 0;
-    content: "6";
+    content: "5";
     width: 100%;
     animation: flip-bottom 250ms ease-out 250ms;
     transform-origin: top;
