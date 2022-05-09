@@ -12,6 +12,7 @@ body {
 }
 
 .flip-card {
+    position: relative;
     display: inline-flex;
     flex-direction: column;
     box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .2);
@@ -19,7 +20,9 @@ body {
 }
 
 .top,
-.bottom {
+.bottom,
+.flip-card.flip::after,
+.flip-card.flip::before {
     height: .75em;
     line-height: 1;
     padding: .25em;
@@ -41,6 +44,10 @@ body {
     border-bottom-left-radius: .1em;
 }
 
-.flip-card::before {}
+.flip-card.flip::before {
+    position: absolute;
+    content: "5";
+    width: 100%;
+}
 
-.flip-card::after {}
+.flip-card.flip::after {}
