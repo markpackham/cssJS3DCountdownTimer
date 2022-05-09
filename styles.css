@@ -14,7 +14,8 @@ body {
 .flip-card {
     display: inline-flex;
     flex-direction: column;
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .5);
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .2);
+    border-radius: .1em;
 }
 
 .top,
@@ -29,6 +30,7 @@ body {
     background-color: #f7f7f7;
     border-top-right-radius: .1em;
     border-top-left-radius: .1em;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .bottom {
@@ -38,3 +40,7 @@ body {
     border-bottom-right-radius: .1em;
     border-bottom-left-radius: .1em;
 }
+
+.flip-card::before {}
+
+.flip-card::after {}
