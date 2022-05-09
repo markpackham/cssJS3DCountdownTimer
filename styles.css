@@ -48,7 +48,7 @@ body {
 
 .flip-card.flip::before {
     position: absolute;
-    content: "5";
+    content: attr(data-current-number);
     width: 100%;
     animation: flip-top 250ms ease-in;
     transform-origin: bottom;
@@ -63,7 +63,7 @@ body {
 .flip-card.flip::after {
     position: absolute;
     bottom: 0;
-    content: "5";
+    content: attr(data-next-number);
     width: 100%;
     animation: flip-bottom 250ms ease-out 250ms;
     transform-origin: top;
