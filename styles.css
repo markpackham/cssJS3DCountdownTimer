@@ -1,6 +1,6 @@
 *,
 *::after,
-*::before {
+* .bottom-flip {
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 2.25rem;
@@ -22,7 +22,7 @@ body {
 .top,
 .bottom,
 .flip-card.flip::after,
-.flip-card.flip::before {
+.flip-card.flip .bottom-flip {
     height: .75em;
     line-height: 1;
     padding: .25em;
@@ -30,7 +30,7 @@ body {
 }
 
 .top,
-.flip-card.flip::before {
+.flip-card.flip .bottom-flip {
     background-color: #f7f7f7;
     border-top-right-radius: .1em;
     border-top-left-radius: .1em;
@@ -46,9 +46,8 @@ body {
     border-bottom-left-radius: .1em;
 }
 
-.flip-card.flip::before {
+.flip-card .bottom-flip {
     position: absolute;
-    content: attr(data-current-number);
     width: 100%;
     animation: flip-top 250ms ease-in;
     transform-origin: bottom;
@@ -60,10 +59,9 @@ body {
     }
 }
 
-.flip-card.flip::after {
+.flip-card .bottom-flip {
     position: absolute;
     bottom: 0;
-    content: attr(data-next-number);
     width: 100%;
     animation: flip-bottom 250ms ease-out 250ms;
     transform-origin: top;
