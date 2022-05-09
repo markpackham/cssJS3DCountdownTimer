@@ -29,14 +29,16 @@ body {
     overflow: hidden;
 }
 
-.top {
+.top,
+.flip-card.flip::before {
     background-color: #f7f7f7;
     border-top-right-radius: .1em;
     border-top-left-radius: .1em;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.bottom {
+.bottom,
+.flip-card.flip::after {
     background-color: white;
     display: flex;
     align-items: flex-end;
