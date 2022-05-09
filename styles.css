@@ -10,3 +10,22 @@ body {
     background-color: #f2f1ed;
     color: #de4848;
 }
+
+.flip-card {
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.top,
+.bottom {
+    height: .5em;
+    line-height: 1;
+}
+
+.top {
+    background-color: #f7f7f7;
+}
+
+.bottom {
+    background-color: white;
+}
