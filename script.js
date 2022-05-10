@@ -1,28 +1,36 @@
-const startNumber = 9;
 const flipCard = document.querySelector(".flip-card");
-const topHalf = flipCard.querySelector(".top");
-const bottomHalf = flipCard.querySelector(".bottom");
-const topFlip = document.createElement("div");
-topFlip.classList.add("top-flip");
-const bottomFlip = document.createElement("div");
-bottomFlip.classList.add("bottom-flip");
 
-topHalf.textContent = startNumber;
-bottomHalf.textContent = startNumber;
-topFlip.textContent = startNumber;
-bottomFlip.textContent = startNumber - 1;
+flip(flipCard);
 
-topFlip.addEventListener("animationstart", (e) => {
-  topHalf.textContent = startNumber - 1;
-});
+function flip(flipCard) {
+  const topHalf = flipCard.querySelector(".top");
+  const bottomHalf = flipCard.querySelector(".bottom");
+  const topFlip = document.createElement("div");
+  topFlip.classList.add("top-flip");
+  const bottomFlip = document.createElement("div");
+  bottomFlip.classList.add("bottom-flip");
+  const startNumber = parseInt(topHalf.textContent);
 
-topFlip.addEventListener("animationend", (e) => {
-  topFlip.remove();
-});
+  topHalf.textContent = startNumber;
+  bottomHalf.textContent = startNumber;
+  topFlip.textContent = startNumber;
+  bottomFlip.textContent = startNumber - 1;
 
-bottomFlip.addEventListener("animationend", (e) => {
-  bottomHalf.textContent = startNumber - 1;
-  bottomFlip.remove();
-});
+  topFlip.addEventListener("animationstart", (e) => {
+    topHalf.textContent = startNumber - 1;
+  });
 
-flipCard.append(topFlip, bottomFlip);
+  topFlip.addEventListener("animationend", (e) => {
+    topFlip.remove();
+  });
+
+  bottomFlip.addEventListener("animationend", (e) => {
+    bottomHalf.textContent = startNumber - 1;
+    bottomFlip.remove();
+    if (startNumber > 1) {
+      flip(flipCard);
+    }
+  });
+
+  flipCard.append(topFlip, bottomFlip);
+}
