@@ -21,6 +21,7 @@ body {
 
 .top,
 .bottom,
+.flip-card .top-flip,
 .flip-card .bottom-flip {
     height: .75em;
     line-height: 1;
@@ -29,7 +30,7 @@ body {
 }
 
 .top,
-.flip-card .bottom-flip {
+.flip-card .top-flip {
     background-color: #f7f7f7;
     border-top-right-radius: .1em;
     border-top-left-radius: .1em;
@@ -58,7 +59,7 @@ body {
     }
 }
 
-.flip-card .bottom-flip {
+.flip-card .top-flip {
     position: absolute;
     bottom: 0;
     width: 100%;
