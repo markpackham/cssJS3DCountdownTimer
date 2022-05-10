@@ -29,7 +29,7 @@ body {
 }
 
 .top,
-.flip-card.flip .bottom-flip {
+.flip-card .bottom-flip {
     background-color: #f7f7f7;
     border-top-right-radius: .1em;
     border-top-left-radius: .1em;
