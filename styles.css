@@ -46,7 +46,7 @@ body {
     border-bottom-left-radius: .1em;
 }
 
-.flip-card .bottom-flip {
+.flip-card .top-flip {
     position: absolute;
     width: 100%;
     animation: flip-top 250ms ease-in;
@@ -59,7 +59,7 @@ body {
     }
 }
 
-.flip-card .top-flip {
+.flip-card .bottom-flip {
     position: absolute;
     bottom: 0;
     width: 100%;
