@@ -12,10 +12,17 @@ bottomHalf.textContent = startNumber;
 topFlip.textContent = startNumber;
 bottomFlip.textContent = startNumber + 1;
 
-flipCard.addEventListener("animationstart", (e) => {
+topFlip.addEventListener("animationstart", (e) => {
   topHalf.textContent = startNumber - 1;
 });
-flipCard.addEventListener("animationend", (e) => {
-  bottomHalf.textContent = startNumber - 1;
+
+topFlip.addEventListener("animationend", (e) => {
+  topFlip.remove();
 });
+
+bottomFlip.addEventListener("animationend", (e) => {
+  bottomHalf.textContent = startNumber - 1;
+  bottomFlip.remove();
+});
+
 flipCard.append(topFlip, bottomFlip);
