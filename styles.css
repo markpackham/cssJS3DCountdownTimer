@@ -21,8 +21,7 @@ body {
 
 .top,
 .bottom,
-.flip-card.flip::after,
-.flip-card.flip .bottom-flip {
+.flip-card .bottom-flip {
     height: .75em;
     line-height: 1;
     padding: .25em;
@@ -38,7 +37,7 @@ body {
 }
 
 .bottom,
-.flip-card.flip::after {
+.flip-card .bottom-flip {
     background-color: white;
     display: flex;
     align-items: flex-end;

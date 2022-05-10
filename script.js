@@ -9,12 +9,13 @@ bottomFlip.classList.add("bottom-flip");
 
 topHalf.textContent = startNumber;
 bottomHalf.textContent = startNumber;
-flipCard.dataset.currentNumber = startNumber;
-flipCard.dataset.nextNumber = startNumber - 1;
+topFlip.textContent = startNumber;
+bottomFlip.textContent = startNumber + 1;
+
 flipCard.addEventListener("animationstart", (e) => {
   topHalf.textContent = startNumber - 1;
 });
 flipCard.addEventListener("animationend", (e) => {
   bottomHalf.textContent = startNumber - 1;
 });
-flipCard.classList.add("flip");
+flipCard.append(topFlip, bottomFlip);
