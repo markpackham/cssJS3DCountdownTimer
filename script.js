@@ -1,4 +1,4 @@
-const countToDate = new Date("2022-05-12");
+const countToDate = new Date().setHours(new Date().getHours() + 24);
 let previouseTimeBetweenDates;
 
 setInterval(() => {
@@ -15,7 +15,6 @@ function flipAllCards(time) {
   const seconds = time % 60;
   const minutes = Math.floor(time / 60) % 60;
   const hours = Math.floor(time / 3600);
-  console.log(hours, minutes, seconds);
 }
 
 function flip(flipCard) {
