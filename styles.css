@@ -73,3 +73,13 @@ body {
         transform: rotateX(0deg);
     }
 }
+
+.container {
+    display: flex;
+    gap: .5em;
+}
+
+.container-segment {
+    display: flex;
+    gap: .1em;
+}
