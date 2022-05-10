@@ -15,6 +15,13 @@ function flipAllCards(time) {
   const seconds = time % 60;
   const minutes = Math.floor(time / 60) % 60;
   const hours = Math.floor(time / 3600);
+
+  const hoursTens = docucument.querySelector("[data-hours-tens]");
+  const hoursOnes = docucument.querySelector("[data-hours-ones]");
+  const minutesTens = docucument.querySelector("[data-minutes-tens]");
+  const minutesOnes = docucument.querySelector("[data-minutes-ones]");
+  const secondsTens = docucument.querySelector("[data-seconds-tens]");
+  const secondsOnes = docucument.querySelector("[data-seconds-ones]");
 }
 
 function flip(flipCard) {
